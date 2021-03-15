@@ -118,7 +118,7 @@ def recieve():
 
 def sendMessage(x):
   # upload frequency
-  uart1.write(' AT$IF=923200000'+"\r\n")
+  uart1.write('AT$IF=923200000'+"\r\n")
   wait_ms(100)
   recieve()
   
