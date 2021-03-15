@@ -1,0 +1,19 @@
+var payload,
+  l_counts,
+  r_counts,
+  cumsum,
+  parsedData = [],
+  obj = {};
+
+// If byte #1 of the payload is l_counts (hex to decimal)
+l_counts = parseInt(payload.slice(0, 3), 16);
+r_counts = parseInt(payload.slice(3, 6), 16);
+cumsum = parseInt(payload.slice(6, 10), 16);
+
+// Store objects in parsedData array
+obj = {};
+obj.key = 'l_counts';
+obj.value = l_counts;
+obj.type = 'number';
+obj.unit = '人';
+parsedData.push(obj);
